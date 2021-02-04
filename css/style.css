@@ -1,1 +1,57 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #292929;
+}
+
+.container {
+  margin-top: 5rem;
+  display: inline-block;
+  width: 40%;
+  max-width: 90%;
+  position: relative;
+}
+
+.container__input {
+  width: 100%;
+  padding: 15px;
+  border-radius: 25px;
+  height: 10px;
+  z-index: 999;
+}
+
+.container label {
+  position: relative;
+}
+
+.container label::before {
+  content: "";
+  position: absolute;
+  right: 15px;
+  top: 0;
+  bottom: 0;
+  width: 20px;
+  background: url("../images/bx-search.svg") center/contain no-repeat;
+  cursor: pointer;
+  -webkit-transition: .4s ease-in-out;
+  transition: .4s ease-in-out;
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+    width: 80%;
+  }
+}
+/*# sourceMappingURL=style.css.map */

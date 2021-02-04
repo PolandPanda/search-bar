@@ -1,0 +1,51 @@
+$font: "Poppins", sans-serif;
+$dark: #292929;
+$light: #fff;
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    background-color: $dark;
+}
+
+.container {
+    margin-top: 5rem;
+    display: inline-block;
+    width: 40%;
+    max-width: 90%;
+    position: relative;
+    &__input {
+        width: 100%;
+        padding: 15px;
+        border-radius: 25px;
+        height: 10px;
+        z-index: 999;
+    }
+    label {
+        position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        right: 15px;
+        top: 0;
+        bottom: 0;
+        width: 20px;
+        background: url("../images/bx-search.svg") center / contain no-repeat;
+        cursor: pointer;
+        transition: .4s ease-in-out;
+     
+      }
+   
+    }
+
+    @media only screen and (max-width:768px) {
+        width: 80%;
+    }
+}
